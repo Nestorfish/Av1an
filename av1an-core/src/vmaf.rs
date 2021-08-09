@@ -253,7 +253,6 @@ pub fn run_vmaf_on_chunk(
     "-y",
     "-thread_queue_size",
     "1024",
-    "-hide_banner",
     "-r",
     "60",
     "-i",
