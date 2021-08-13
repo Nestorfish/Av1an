@@ -142,7 +142,9 @@ pub fn run_vmaf_on_files(
   cmd.args(["-r", "60", "-i", source.as_os_str().to_str().unwrap()]);
   cmd.args(["-filter_complex"]);
 
+  // FIXME: Use given VMAF resolution from commandline
   let res = "1920x1080";
+  // FIXME: Use given vmaf_filter from commandline...
   let vmaf_filter = "";
   let file_path = output.with_extension("json");
   let threads = "";
@@ -254,11 +256,11 @@ pub fn run_vmaf_on_chunk(
     "-thread_queue_size",
     "1024",
     "-r",
-    "60",
+    "60", // TODO: explain
     "-i",
     encoded.as_ref().to_str().unwrap(),
     "-r",
-    "60",
+    "60", // TODO: explain
     "-i",
     "-",
     "-filter_complex",
