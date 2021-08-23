@@ -103,6 +103,7 @@ impl<'a> TargetQuality<'a> {
           Skip::High
         },
       );
+      println!("Returning cq: {} VMAF: {} for {} samples\n\n", next_q, score, frames);
       return next_q;
     }
 
@@ -157,6 +158,7 @@ impl<'a> TargetQuality<'a> {
       q_vmaf,
       Skip::None,
     );
+    println!("Interpolated to cq: {} VMAF: {} for {} samples\n\n", q, q_vmaf, frames);
 
     q as u32
   }
